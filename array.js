@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 const memory = require('./memory');
 
 const Memory = new memory();
@@ -9,7 +10,7 @@ class Array {
   }
   push(value) {
     this._resize(this.length +1);
-    Memory.settings(this.ptr + this.length, value);
+    Memory.set(this.ptr + this.length, value);
     this.length++;
   }
   _resize(size) {
